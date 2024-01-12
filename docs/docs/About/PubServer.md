@@ -50,8 +50,8 @@ The easiest way is to open this article in your Android phone, so that all the f
 * Go to Settings
 * Select "TAK Servers"
 * Tap the "..." and Click "Add"
-*  Click Advanced Options
+* Click Advanced Options
 * Select TCP as Streaming Protocol
-*  Use this address: 137.184.101.250
+* Use this address: 137.184.101.250
 * Server port : 8087
 * Leave the rest unchecked. Username or Password are not required.

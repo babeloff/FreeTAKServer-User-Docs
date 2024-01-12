@@ -104,7 +104,7 @@ Run one of the following (equivalent) commands to start the [ZeroTouch](../../In
 wget -qO - bit.ly/freetakhub2 | sudo bash
 ```
 ```bash
-wget -qO - https://raw.githubusercontent.com/FreeTAKTeam/FreeTAKHub-Installation/main/scripts/easy_install.sh | bash
+wget -qO - https://raw.githubusercontent.com/FreeTAKTeam/FreeTAKHub-Installation/main/scripts/easy_install.sh | sudo bash
 ```
 
 ## After installation

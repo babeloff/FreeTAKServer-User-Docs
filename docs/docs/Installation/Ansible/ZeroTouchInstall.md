@@ -30,6 +30,10 @@ please use the following command (please note this must be done in Ubuntu 22.04)
 ```console
 wget -qO - bit.ly/freetakhub2 | sudo INSTALL_TYPE=legacy bash
 ```
+or
+```console
+wget -qO - bit.ly/freetakhub2 | sudo bash -s -- --legacy
+```
 
 NOTE:
 * Intel-based architecture
@@ -64,6 +68,37 @@ bash
 
 Putting it all together, `wget -qO - bit.ly/freetakhub2 | sudo bash` downloads the content from the URL shortened as `bit.ly/freetakhub2`, then immediately executes that content as a bash script with superuser privileges.
 
+### ZT Usage Options
+
+Here is an example to display the usage instruction for the ZTI.
+
+```console
+wget -qO - bit.ly/freetakhub2 | sudo bash -s -- --help
+```
+
+```text
+Usage: <basename> [<optional-arguments>]
+
+Install Free TAK Server and components.
+
+Available options:
+
+-h, --help       Print help
+-v, --verbose    Print script debug info
+-c, --check      Check for compatibility issues while installing
+    --core       Install FreeTAKServer, UI, and Web Map
+-s, --stable     [DEFAULT] Install latest stable version (v$STABLE_FTS_VERSION)
+-l, --legacy     Install legacy version (v$LEGACY_FTS_VERSION)
+    --repo       Use specified ZT Installer repository
+    --branch     Use specified ZT Installer repository branch
+    --dev-test   Sets TEST Envar to 1
+    --dry-run    Sets up dependencies but exits before running any playbooks
+```
+
+Here is an example using an alternate forked repository and non-main branch.
+```console
+wget -qO - https://raw.githubusercontent.com/babeloff/FreeTAKHub-Installation/main/scripts/easy_install.sh | sudo bash -s -- --repo "https://github.com/babeloff/FreeTAKHub-Installation.git" --branch foo
+```
 
 # Zero Touch Deployment Diagram
 This script will install and configure FreeTAKHub components.
